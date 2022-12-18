@@ -1,15 +1,10 @@
-const express = require('express')
-
-const app = express()
+const dotenv = require('dotenv');
 
 
 
-app.get('/',(req,res)=>{
-    res.send("Hello world")
-})
-app.listen(3000,()=>{
+dotenv.config();
 
-    console.log("server express started");
-}
 
-)
+require("./app");
+require('./mongodb');
+
